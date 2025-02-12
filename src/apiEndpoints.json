@@ -1,0 +1,108 @@
+{
+    "flights": {
+      "getNearByAirports": {
+        "endpoint": "/api/v1/flights/getNearByAirports",
+        "method": "GET",
+        "parameters": {
+          "lat": "19.242218017578125",
+          "lng": "72.85846156046128",
+          "locale": "en-US"
+        },
+        "required": ["lat", "lng"],
+        "description": "Get nearby airports based on latitude and longitude."
+      },
+      "searchAirport": {
+        "endpoint": "/api/v1/flights/searchAirport",
+        "method": "GET",
+        "parameters": {
+          "query": "new",
+          "locale": "en-US"
+        },
+        "required": ["query"],
+        "description": "Search for an airport using a city, place, or address."
+      },
+      "searchFlights": {
+        "endpoint": "/api/v1/flights/searchFlights",
+        "method": "GET",
+        "parameters": {
+          "originSkyId": "LOND",
+          "destinationSkyId": "NYCA",
+          "originEntityId": "27544008",
+          "destinationEntityId": "27537542",
+          "date": "2025-03-01",
+          "returnDate": "",
+          "cabinClass": "economy",
+          "adults": 1,
+          "childrens": 0,
+          "infants": 0,
+          "sortBy": "best",
+          "limit": 100,
+          "carriersIds": "",
+          "currency": "USD",
+          "market": "en-US",
+          "countryCode": "US"
+        },
+        "required": ["originSkyId", "destinationSkyId", "originEntityId", "destinationEntityId", "date"],
+        "description": "Search for flights between two locations."
+      },
+      "searchFlightEverywhere": {
+        "endpoint": "/api/v1/flights/searchFlightEverywhere",
+        "method": "GET",
+        "parameters": {
+          "originEntityId": "95673320",
+          "destinationEntityId": "",
+          "travelDate": "",
+          "returnDate": "",
+          "adults": 1,
+          "childAges": "",
+          "cabinClass": "economy",
+          "journeyType": "one_way",
+          "currency": "USD"
+        },
+        "required": ["originEntityId"],
+        "description": "Search for flights from a location to anywhere."
+      }
+    },
+    "hotels": {
+      "searchDestinationOrHotel": {
+        "endpoint": "/api/v1/hotels/searchDestinationOrHotel",
+        "method": "GET",
+        "parameters": {
+          "query": "new"
+        },
+        "required": ["query"],
+        "description": "Search for a hotel or destination by name."
+      },
+      "searchHotels": {
+        "endpoint": "/api/v1/hotels/searchHotels",
+        "method": "GET",
+        "parameters": {
+          "entityId": "",
+          "checkin": "2025-04-01",
+          "checkout": "2025-04-07",
+          "adults": 1,
+          "rooms": 1,
+          "limit": 30,
+          "offset": "",
+          "sorting": "",
+          "currency": "USD",
+          "market": "en-US",
+          "countryCode": "US"
+        },
+        "required": ["entityId", "checkin", "checkout"],
+        "description": "Search for hotels based on entity ID and dates."
+      },
+      "getHotelReviews": {
+        "endpoint": "/api/v1/hotels/getHotelReviews",
+        "method": "GET",
+        "parameters": {
+          "hotelId": "106005202",
+          "currency": "USD",
+          "market": "en-US",
+          "countryCode": "US"
+        },
+        "required": ["hotelId"],
+        "description": "Retrieve reviews for a specific hotel."
+      }
+    }
+  }
